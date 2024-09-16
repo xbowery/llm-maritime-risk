@@ -1,39 +1,10 @@
 import scrapy
 from scrapy.crawler import CrawlerProcess
-import re
 from tqdm import tqdm
 import logging
 
-from pymongo import MongoClient
-from dotenv import load_dotenv
-import os
-
-class Article:
-    def __init__(self, headline, description, severity, main_risk, country, state, link):
-        self.headline = headline
-        self.description = description
-        self.severity = severity
-        self.main_risk = main_risk
-        self.country = country
-        self.state = state
-        self.link = link
-
-    def to_dict(self):
-        return {
-            "headline": self.headline,
-            "description": self.description,
-            "severity": self.severity,
-            "main_risk": self.main_risk,
-            "country": self.country,
-            "state": self.state,
-            "link": self.link
-        }
-    
-def clean_text(text: str) -> str:
-    text = re.sub(r'[^\x00-\x7F]+', ' ', text)
-    text = re.sub(r'[\r\n\t]+', ' ', text)
-    text = re.sub(r'\s+', ' ', text).strip()
-    return text
+# Import from utils
+from utils import Article, get_mongodb_collection, clean_text
 
 class MaritimeExecutiveSpider(scrapy.Spider):
     name = 'maritime-executive'
@@ -53,10 +24,7 @@ class MaritimeExecutiveSpider(scrapy.Spider):
         self.progress_bar = tqdm(desc="Scraping articles", unit="article", total=self.page_count*len(self.keywords)*10)
 
         # Setup mongodb connection
-        load_dotenv()
-        cluster = MongoClient({os.getenv("DATABASE_CONNECTION")})
-        db = cluster['llm-maritime-risk']
-        self.collection = db["Articles"]
+        self.collection = get_mongodb_collection()
 
         # Disable scrapy and mongodb logging
         logging.getLogger('scrapy').setLevel(logging.WARNING)
