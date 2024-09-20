@@ -32,6 +32,13 @@ def get_mongodb_collection():
     collection = db["Articles"]
     return collection
 
+def get_testing_mongodb_collection():
+    load_dotenv()
+    cluster = MongoClient(os.getenv("DATABASE_CONNECTION"))
+    db = cluster['llm-maritime-risk']
+    collection = db["Testing"]
+    return collection
+
 # Clean and normalize scraped text
 def clean_text(text: str) -> str:
     text = re.sub(r'[^\x00-\x7F]+', ' ', text)  # Remove non-ASCII characters
