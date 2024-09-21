@@ -47,7 +47,7 @@ for i in des:
         
     except Exception as e:
         print(f"Error on description {counter}: {e}")
-        with open('enhanced_choice_risks.txt', 'a') as f:
+        with open('..\\output\\enhanced_choice_risks.txt', 'a') as f:
             f.write(str(counter) + '. ')
             f.write("Error occurred")
             f.write('\n\n')

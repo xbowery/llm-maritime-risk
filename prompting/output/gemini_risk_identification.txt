@@ -1,0 +1,271 @@
+1. The main risk affecting port activities is **Port Strike**. 
+
+Here's why:
+
+* The text explicitly states that workers at the Port of Dakar **suspended strike action** after their demands were met. 
+* This indicates that the primary issue was a **labor dispute** leading to a strike, which is the defining characteristic of a Port Strike.
+
+While the text mentions potential **Port Congestion** (due to lingering disruptions and backlog), it's a secondary effect of the strike, not the primary risk itself. 
+
+
+2. The main risk affecting the port activities is **Port Disruption**. 
+
+Here's why:
+
+* **Port Strike:** This refers to a work stoppage by port workers due to labor disputes. The text doesn't mention any labor issues.
+* **Port Congestion:** This involves a backlog of ships, containers, or cargo due to high volumes or operational inefficiencies. The text focuses on the suspension of operations due to external factors, not congestion.
+* **Port Closure:** This signifies a complete shutdown of port operations, often due to safety concerns or emergencies. While the text mentions a suspension of operations, it doesn't indicate a complete closure.
+
+The text specifically states that operations were suspended due to "strong winds," which is an external factor causing a temporary disruption in port activities. This fits the definition of **Port Disruption**. 
+
+
+3. The main risk affecting port activities in this scenario is **Port Disruption**. 
+
+Here's why:
+
+* **Port Strike:** While a port strike is mentioned (by port workers), the text focuses on the potential *consequence* of that strike, which is the trucker strike.
+* **Port Congestion:**  Congestion is a possible result of the strikes, but the text doesn't explicitly state it as the primary concern.
+* **Port Closure:**  The text doesn't mention any official closure of the port.
+
+Therefore, the text describes a broader disruption of port activities due to the combined effect of the port worker strikes and the potential trucker strike, making **Port Disruption** the most accurate classification. 
+
+
+4. The correct classification is **Port Disruption**.
+
+Here's why:
+
+* **Port Strike:** This refers to a work stoppage by port workers due to labor disputes. The text doesn't mention any labor issues.
+* **Port Congestion:** This describes a backlog of ships and cargo due to high demand or operational bottlenecks. While the maintenance might cause temporary congestion, it's not the primary issue.
+* **Port Closure:** This implies a complete shutdown of port activities, often due to security threats or natural disasters. The text mentions a *temporary halt* for maintenance, not a complete closure.
+
+Therefore, the planned maintenance causing a temporary suspension of operations best fits the definition of a **Port Disruption**. 
+
+
+5. The main risk affecting the port activities is **Port Disruption**. 
+
+While the text mentions a planned terminal update, the unexpected complications causing delays and disruption to normal operations fall outside the categories of Port Strike, Port Congestion, and Port Closure. 
+
+
+6. The text describes **Port Congestion** as the main risk affecting port activities. 
+
+Here's why:
+
+* **Decreasing Wait Times:** The text states that average waiting times have dropped to below 1 day, indicating a reduction in congestion. 
+* **Congestion Subsided:**  The phrase "congestion largely subsiding" explicitly mentions a decrease in congestion.
+* **Average Vessel Count:** The average daily number of vessels at anchor being 4 suggests a manageable level of congestion, although it's important to note this is an average and individual vessel counts may fluctuate.
+
+While the text mentions factors like off-schedule arrivals and cargo backlogs, these are contributing factors to congestion rather than the primary risk itself.  A port strike or closure would have more significant and immediate impacts than what is described in the text. 
+
+
+7. The text describes **Port Congestion**. 
+
+Here's why:
+
+* **Average waiting times dropped to below 1 day:** This indicates a decrease in congestion, but the text also mentions an average of 13 container and cargo vessels at anchor.
+* **Individual vessel wait times may vary:** This highlights potential bottlenecks and uneven distribution of resources within the port, contributing to congestion.
+* **Off-schedule arrivals, container terminal contracts, and cargo backlog levels:** These are all factors that contribute to port congestion.
+
+**While the average waiting time has decreased, the presence of multiple vessels at anchor and the contributing factors mentioned point towards ongoing congestion issues at the Port of Abidjan.** 
+
+
+8. The main risk affecting the port activities is **Port Congestion**. 
+
+Here's why:
+
+* **Average waiting times of 1.1 days:** This indicates a significant backlog of vessels waiting to enter the port, a hallmark of congestion.
+* **Average daily number of 9 container and cargo vessels at anchor:** This further emphasizes the high volume of ships waiting for berthing, a clear sign of congestion.
+
+While the text mentions factors like off-schedule arrivals, container terminal contracts, and cargo backlog levels, these are contributing factors to the congestion rather than the primary risk itself. 
+
+
+9. The main risk affecting the port activities in this scenario is **Port Disruption**.
+
+Here's why:
+
+* **Port Strike:**  This involves organized labor action, such as a strike by workers. The text doesn't mention any labor disputes or worker actions.
+* **Port Congestion:** This refers to a backlog of ships and cargo due to factors like high demand or inefficient operations. While weather can contribute to congestion, the text specifically states the terminal "suspended deep sea operations" due to weather, indicating a temporary closure rather than ongoing congestion.
+* **Port Closure:** This refers to a complete closure of the port, often due to security threats, natural disasters, or other major events.  While operations were suspended, the text states the terminal resumed operations fully later that same day. 
+
+**Therefore, the most accurate categorization is Port Disruption, as the weather event caused a temporary interruption of normal port operations.** 
+
+
+10. The correct categorization is **Port Disruption**.
+
+Here's why:
+
+* **Port Strike:** A port strike involves labor disputes and worker walkouts, which is not mentioned in the text.
+* **Port Congestion:** Port congestion refers to a backlog of ships and containers due to high demand or inefficient operations. While the cyber attack might lead to delays, the text doesn't explicitly mention congestion as a primary issue.
+* **Port Closure:**  A port closure implies a complete shutdown, which wasn't the case. The text states operations were "disrupted" and "partially resumed." 
+
+The cyber attack, which caused operational disruptions, fits the definition of a **Port Disruption** as it significantly affected the port's normal functioning, but not to the extent of a complete closure or a labor-related strike. 
+
+
+11. The correct categorization is **Port Disruption**. 
+
+Here's why:
+
+* **Port Strike:**  This involves organized labor action, like a walkout, which is not mentioned in the text.
+* **Port Congestion:** This refers to a buildup of ships, containers, or cargo due to high demand or operational inefficiencies.  While the accident may lead to some congestion, it's not the primary cause.
+* **Port Closure:** This refers to a complete shutdown of port operations, usually due to severe weather, security threats, or other major events.  The text states that there will be *some* disruption, not a complete closure.
+
+The accident itself is causing the disruption, making **Port Disruption** the most accurate classification. 
+
+
+12. The correct categorization is **Port Disruption**. 
+
+Here's why:
+
+* **Port Strike:** This involves organized labor action by port workers, usually demanding better wages or working conditions. The text mentions demonstrators, not port workers, and the reason for the protest is unrelated to labor issues.
+* **Port Congestion:** This refers to a backlog of ships and containers due to factors like high demand, limited capacity, or inefficient operations. The text describes a blockage caused by protesters, not a buildup of cargo.
+* **Port Closure:** This signifies a complete shutdown of port operations, usually due to official orders or natural disasters. While the protesters have blocked access, the text doesn't suggest the port is fully closed or operating under official orders to cease operations. 
+
+Therefore, the most fitting categorization is **Port Disruption**, as the protesters' actions are directly interfering with the port's normal operations, but not necessarily leading to a complete shutdown or a prolonged strike by port workers. 
+
+
+13. The main risk affecting the port activities is **Port Closure**. 
+
+The text explicitly states that the Port of Manzanillo will close due to the approach of Hurricane Beatriz. 
+
+
+14. The main risk affecting the port activities is **Port Closure**. 
+
+The text explicitly states that the Senoko Fishery Port is set to close by the end of March 2024. This indicates a complete cessation of operations, fitting the definition of a port closure. 
+
+
+15. The main risk affecting the port activities is **Port Closure**. 
+
+The text explicitly states that APM Terminals Elizabeth will be closed on July 1 and July 4. While the reason for the July 1 closure is unknown, the July 4 closure is attributed to American Independence Day, making it a planned closure. 
+
+
+16. The main risk affecting the port activities in this case is **Port Disruption**. 
+
+Here's why:
+
+* **Port Strike:** This involves intentional work stoppages by port workers, which is not mentioned in the text.
+* **Port Congestion:** This refers to a buildup of ships and cargo due to insufficient capacity, not weather-related disruptions. 
+* **Port Closure:**  While the port operations were temporarily suspended, it was not a full closure.  The text specifically states that operations normalized after the weather event.
+
+The text clearly states that the disruption was caused by "inclement weather conditions," which falls under the umbrella of **Port Disruption**. This category encompasses various unforeseen events that can temporarily halt or hinder port activities. 
+
+
+17. The main risk affecting the port activities is **Port Congestion**. 
+
+Here's why:
+
+* **Average waiting times:** The text mentions an average waiting time of 1.5 days for vessels. This indicates a backlog of vessels waiting to be processed, a key characteristic of port congestion.
+* **Average number of vessels at anchor:**  The text states that there are an average of 2 container and cargo vessels at anchor daily. This further supports the notion of congestion, as vessels are waiting at anchor instead of being unloaded and processed.
+* **Factors contributing to congestion:** The text mentions "off-schedule arrivals, container terminal contracts, and cargo backlog levels" as factors that can impact individual vessel wait times. These factors are all commonly associated with port congestion.
+
+While the text mentions waiting times and vessel backlog, it doesn't indicate any strikes, closures, or other disruptive events that would qualify as "Port Strike" or "Port Closure." 
+
+
+18. The main risk affecting the port activities is **Port Congestion**. 
+
+Here's why:
+
+* **The text explicitly mentions "overall congestion at the Port of Gdansk" and "average waiting times at the port."** This indicates that there are delays and backlogs in port operations, a hallmark of congestion.
+* **The text also mentions "average daily number of container and cargo vessels at anchor."** This further suggests that vessels are waiting to be unloaded or loaded, contributing to the congestion.
+
+While the text mentions variations in individual vessel wait times, this is a consequence of congestion, not an independent risk factor.
+
+
+19. The main risk affecting the port activities is **Port Strike**. 
+
+The text explicitly states that the Swedish Port Workers' Union **announced the withdrawal of a strike** at the Ports of Gothenburg and Helsingborg. This directly indicates a strike was planned and subsequently averted. 
+
+
+20. The main risk affecting the port activities is **Port Congestion**.
+
+Here's why:
+
+* **High waiting times:**  The text explicitly states an average waiting time of 12.5 hours for vessels, indicating a significant backlog.
+* **High vessel count:**  An average of 3 container and cargo vessels at anchor daily further points to a congested situation.
+* **Reasons for variation:** The text mentions factors like off-schedule arrivals, container terminal contracts, and cargo backlog levels, all contributing to the congestion.
+
+While a port strike could lead to similar delays, there's no mention of labor disputes or worker actions in the text. A port closure would completely halt operations, which is not indicated either. 
+
+
+21. The main risk affecting the port activities is **Port Congestion**. 
+
+Here's why:
+
+* **Average waiting times of 12 hours:** This indicates a significant backlog of vessels, suggesting a bottleneck in the port's capacity to handle the volume of ships arriving.
+* **Average daily number of 25 vessels at anchor:** This reinforces the congestion issue, as a large number of vessels are waiting to be processed.
+* **Individual vessel wait times may vary:**  This further highlights the congestion, as the variation in wait times is likely due to the port's inability to handle all vessels at the same pace.
+
+While the text mentions potential factors like off-schedule arrivals and cargo backlog, these are symptoms of congestion rather than separate risks.  Port strikes and closures would typically involve more explicit statements about labor disputes or port closures, which are not present in this text. 
+
+
+22. The main risk affecting the port activities is **Port Congestion**. 
+
+Here's why:
+
+* **Average waiting times of 18.2 hours** indicate a significant backlog of vessels, suggesting a high volume of traffic exceeding the port's capacity. 
+* **Average daily number of 99 container and cargo vessels at anchor** further reinforces the congestion issue, as this signifies a large number of ships waiting to unload or load.
+* **Individual vessel wait times may vary due to off-schedule arrivals, container terminal contracts, and cargo backlog levels**  all contribute to the congestion by creating uneven distribution of workload and delays.
+
+While the text mentions factors that can cause individual vessel delays, these are all symptoms of the overarching issue of **Port Congestion**. 
+
+
+23. The main risk affecting the port activities is **Port Congestion**. 
+
+Here's why:
+
+* **The text explicitly mentions "congestion at the Port of Bangkok" and "average waiting times at the port."** This clearly indicates a backlog of vessels and cargo, a defining characteristic of port congestion. 
+* **The text also mentions "vessel wait times" and "average daily number of container and cargo vessels at anchor,"** further supporting the idea of congestion.
+
+While the text mentions factors that can contribute to individual vessel wait time variations, these are not the primary risk impacting the port overall. 
+
+
+24. The main risk affecting the port activities is **Port Closure**. 
+
+The text explicitly states that the port functions will be closed for 8 hours due to the Eid-ul-Adha holidays.  While there might be some congestion due to the closure, the primary factor driving the disruption is the planned closure itself. 
+
+
+25. The correct categorization is **Port Closure**. 
+
+The text clearly states that APM Terminals Elizabeth will be **closed** on July 4th for the Independence Day Holiday. This directly aligns with the definition of Port Closure, which refers to the complete shutdown of port operations. 
+
+
+26. The main risk affecting the port activities in this scenario is **Port Disruption**. 
+
+While the text mentions traffic disruption and limitations, it's not directly related to:
+
+* **Port Strike:**  There's no mention of labor disputes or worker strikes.
+* **Port Congestion:** The disruption is caused by a specific incident, not a general overload of cargo or vessels. 
+* **Port Closure:**  The port wasn't fully closed, only certain channels were temporarily restricted.
+
+Therefore, the **Port Disruption** category best fits the situation, as the boat crash caused an unexpected and temporary disruption to port operations. 
+
+
+27. The text describes a **Port Disruption**. 
+
+Here's why:
+
+* **Port Strike:**  This refers to a work stoppage by port workers, usually due to a labor dispute. The text mentions a planned system update, not a labor action.
+* **Port Congestion:** This refers to a buildup of cargo due to high demand, limited resources, or inefficiency. The text specifically states that operations will be **paused** during the update, indicating a planned shutdown rather than congestion. 
+* **Port Closure:** This refers to a complete shutdown of a port, often due to extreme weather, security threats, or other emergencies.  The update is scheduled for a limited time frame, not a complete closure.
+
+**Therefore, the text describes a planned disruption to port operations due to a system update, which fits the definition of a Port Disruption.** 
+
+
+28. The text describes **Port Congestion**. 
+
+Here's why:
+
+* **The text explicitly mentions "average waiting times" and "congestion largely subsiding."** This indicates a period of high vessel traffic and delays, which are hallmarks of port congestion.
+* **The mention of "average daily number of container and cargo vessels at anchor" reinforces the congestion issue.** A high number of vessels waiting at anchor is a direct result of congestion.
+
+While the text mentions "off-schedule arrivals, container terminal contracts, and cargo backlog levels" as potential reasons for variation in individual vessel wait times, these are contributing factors within the context of congestion, not separate risks. 
+
+
+29. The main risk affecting port activities is **Port Congestion**. 
+
+Here's why:
+
+* **The text explicitly mentions "average waiting times at the Port of Cape Town have dropped below 1 day with congestion largely subsiding."** This indicates that congestion was a problem but is now improving. 
+* **The text also mentions "average daily number of container and cargo vessels at anchor at the port was 4."**  This suggests that there was a buildup of vessels waiting to enter the port, a key characteristic of congestion.
+
+While the text mentions potential variations in individual vessel wait times, these are attributed to specific factors and don't indicate a widespread, systemic issue like a strike or closure. 
+
+
