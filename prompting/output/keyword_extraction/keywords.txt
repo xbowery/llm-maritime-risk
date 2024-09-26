@@ -1,0 +1,58 @@
+1. [('charges lingering disruptions', 0.3164), ('reported freight forwarders', 0.3223), ('updated media sources', 0.3575), ('strike july 13', 0.4728), ('indefinite strike july', 0.5464)]
+
+2. [('durban container terminal', 0.289), ('45 local time', 0.3002), ('received everstream analytics', 0.3055), ('following strong winds', 0.3943), ('july 10 suspended', 0.4911)]
+
+3. [('montevideo truckers allege', 0.4657), ('weekly strikes port', 0.4699), ('workers hindered truckers', 0.4712), ('protest port worker', 0.503), ('friday weekly strikes', 0.5285)]
+
+4. [('mumbai port mumbai', 0.3876), ('halt operations', 0.4002), ('planned terminal maintenance', 0.4244), ('everstream analytics july', 0.4576), ('temporarily halt operations', 0.479)]
+
+5. [('unexpected complications planned', 0.3368), ('operations planned terminal', 0.3506), ('everstream analytics july', 0.3655), ('temporarily halt operations', 0.4206), ('july 11 trucks', 0.4207)]
+
+6. [('august', 0.327), ('cargo backlog levels', 0.3282), ('analytics indicates week', 0.3464), ('21 august 27', 0.3867), ('dropped day congestion', 0.445)]
+
+7. [('cargo backlog levels', 0.3362), ('anchor port 13', 0.3461), ('port abidjan dropped', 0.3539), ('analytics indicates week', 0.3623), ('july', 0.4279)]
+
+8. [('23 average waiting', 0.3591), ('vessels coming port', 0.3688), ('contracts cargo backlog', 0.3838), ('analytics indicates week', 0.4154), ('july 17 july', 0.5723)]
+
+9. [('operations fully 11', 0.2614), ('30 local time', 0.2786), ('suspended deep sea', 0.2999), ('july severe weather', 0.524), ('analytics july report', 0.563)]
+
+10. [('july confirmed operations', 0.4183), ('cyber attack', 0.4344), ('resumed port nagoya', 0.4433), ('july previously cyber', 0.4616), ('cyber attack orchestrated', 0.4925)]
+
+11. [('hit truck', 0.2897), ('occurred port hamburg', 0.2936), ('media sources july', 0.3096), ('investigations ongoing july', 0.3843), ('fatal workplace accident', 0.5458)]
+
+12. [('barbed wires large', 0.1618), ('government action overhaul', 0.2067), ('blocked access roads', 0.2095), ('july demonstrators', 0.2394), ('reports hundreds protesters', 0.5232)]
+
+13. [('sources reported june', 0.3727), ('southwestern mexico close', 0.3789), ('ocean closure', 0.405), ('hurricane', 0.4775), ('june 30 vessels', 0.4814)]
+
+14. [('port business disruptions', 0.3356), ('jurong fishery', 0.3379), ('close end march', 0.3476), ('2024', 0.3961), ('media sources june', 0.5097)]
+
+15. [('july unknown reasons', 0.4147), ('operations normal july', 0.4171), ('new york closed', 0.4561), ('july american independence', 0.4718), ('everstream analytics june', 0.6178)]
+
+16. [('pier suspended second', 0.3869), ('28 inclement weather', 0.4468), ('27 june 28', 0.4612), ('local time june', 0.477), ('temporarily disrupted june', 0.6092)]
+
+17. [('vessels coming port', 0.3349), ('updated vessel data', 0.3491), ('analytics indicates week', 0.3649), ('contracts cargo backlog', 0.3677), ('june 19 june', 0.607)]
+
+18. [('updated vessel data', 0.2993), ('contracts cargo backlog', 0.3656), ('analytics indicates week', 0.3829), ('june 26', 0.4457), ('july overall congestion', 0.4967)]
+
+19. [('ports gothenburg helsingborg', 0.3039), ('members strike previously', 0.3247), ('swedish port workers', 0.3769), ('july july 11', 0.381), ('union announced strike', 0.4863)]
+
+20. [('coming port cases', 0.3216), ('analytics indicates week', 0.3594), ('contracts cargo backlog', 0.3596), ('stood 12 hours', 0.4006), ('june 19 june', 0.582)]
+
+21. [('contracts cargo backlog', 0.3647), ('waiting times port', 0.3713), ('anchor port 25', 0.3949), ('analytics indicates week', 0.4025), ('june 19 june', 0.6139)]
+
+22. [('guangzhou stood 18', 0.3444), ('waiting times port', 0.3637), ('analytics indicates week', 0.3685), ('contracts cargo backlog', 0.3846), ('june', 0.5246)]
+
+23. [('bangkok improved average', 0.3024), ('times port dropped', 0.314), ('analytics indicates week', 0.322), ('contracts cargo backlog', 0.3658), ('june 26 july', 0.4666)]
+
+24. [('depots remain closed', 0.3963), ('port functions closed', 0.4164), ('local time june', 0.4226), ('chittagong bangladesh june', 0.4715), ('holidays addition private', 0.4842)]
+
+25. [('day holiday terminal', 0.3673), ('independence day holiday', 0.3914), ('terminal resume operations', 0.4051), ('africa close july', 0.6458), ('everstream analytics june', 0.6905)]
+
+26. [('yacht ferry following', 0.3797), ('26 traffic disrupted', 0.418), ('sunken vessel recovered', 0.4515), ('miami june', 0.4524), ('following accident traffic', 0.4599)]
+
+27. [('apm terminals liberia', 0.3299), ('23 shipping sources', 0.3522), ('terminals liberia 12', 0.3596), ('local time june', 0.5208), ('operations paused online', 0.5337)]
+
+28. [('27 average waiting', 0.3007), ('coming port cases', 0.3133), ('week august', 0.3631), ('contracts cargo backlog', 0.4327), ('dropped day congestion', 0.4811)]
+
+29. [('updated vessel data', 0.2823), ('analytics indicates week', 0.3186), ('contracts cargo backlog', 0.3617), ('dropped day congestion', 0.4156), ('june 19 june', 0.5007)]
+

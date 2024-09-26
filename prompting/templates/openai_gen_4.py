@@ -6,7 +6,7 @@ import time
 
 load_dotenv()
 
-df = pd.read_excel('cleaned_risk data SMU.xlsx')
+df = pd.read_excel('cleaned_risk data.xlsx')
 des = df['Cleaned_Description']
 
 client = OpenAI(
