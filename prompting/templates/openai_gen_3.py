@@ -6,8 +6,8 @@ import time
 
 load_dotenv()
 
-df = pd.read_excel('240902_Sample risk data SMU.xlsx')
-des = df['Description']
+df = pd.read_excel('cleaned_risk data SMU.xlsx')
+des = df['Cleaned_Description']
 
 client = OpenAI(
         api_key=os.environ.get("OPENAI_API_KEY"),
@@ -36,7 +36,7 @@ for i in des:
     try:
         result = classify_risk(i)
         
-        with open('..\\output\\openai\\original\\risk_identification.txt', 'a') as f:
+        with open('..\\output\\openai\\cleaned\\risk_identification.txt', 'a') as f:
             f.write(str(counter) + '. ')
             f.write(result)
             f.write('\n\n')
@@ -47,7 +47,7 @@ for i in des:
         
     except Exception as e:
         print(f"Error on description {counter}: {e}")
-        with open('..\\output\\openai\\original\\risk_identification.txt', 'a') as f:
+        with open('..\\output\\openai\\cleaned\\risk_identification.txt', 'a') as f:
             f.write(str(counter) + '. ')
             f.write("Error occurred")
             f.write('\n\n')

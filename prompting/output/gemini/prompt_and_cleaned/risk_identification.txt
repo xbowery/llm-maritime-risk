@@ -1,0 +1,98 @@
+1. ## Port Disruption 
+
+
+2. ## Port Disruption 
+
+
+3. ## Port Strike 
+
+
+4. ## Port Disruption 
+
+
+5. ## Port Disruption 
+
+
+6. ## Port Congestion 
+
+
+7. ## Port Congestion 
+
+
+8. ## Port Congestion 
+
+
+9. ## Port Disruption 
+
+
+10. ## Port Disruption 
+
+
+11. ## Port Disruption 
+
+
+12. ## Port Disruption 
+
+
+13. ## Port Closure 
+
+
+14. ## Port Closure 
+
+
+15. ## Port Disruption 
+
+
+16. ## Port Disruption 
+
+
+17. ## Port Congestion 
+
+
+18. ## Port Congestion 
+
+
+19. ## Port Strike 
+
+
+20. ## Port Congestion 
+
+
+21. ## Port Congestion 
+
+
+22. ## Port Congestion 
+
+
+23. ## Port Congestion 
+
+
+24. ## Final Risk Classification: **Port Disruption** 
+
+**Reasoning:**
+
+* **Port Strike:**  This involves a deliberate work stoppage by port workers, often due to labor disputes. The text doesn't mention any worker strikes or protests.
+* **Port Closure:** This involves a complete shutdown of port operations, typically due to severe weather, natural disasters, or security threats.  The port is not completely closed, only certain functions are suspended.
+* **Port Congestion:** This refers to a backlog of ships waiting to berth or cargo waiting to be unloaded. While the text mentions the potential for congestion, it's not the primary issue.
+* **Port Disruption:** This describes any interruption to normal port operations, regardless of the cause.  The text mentions temporary suspension of operations, specific closures of certain facilities, and the potential for congestion.  This aligns with the definition of a disruption, making it the most accurate classification. 
+
+**Reflection:**
+
+While there is a potential for congestion, the primary issue is the disruption of normal port operations due to the Eid-ul-Adha holiday and related closures. This makes "Port Disruption" the most accurate classification, even though "Port Congestion" could potentially be a secondary risk. 
+
+
+25. ## Port Closure 
+
+
+26. ## Port Disruption 
+
+
+27. ## Port Disruption 
+
+
+28. ## Port Congestion 
+
+
+29. ## Port Congestion 
+
+

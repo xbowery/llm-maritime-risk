@@ -6,8 +6,8 @@ import time
 
 load_dotenv()
 
-df = pd.read_excel('240902_Sample risk data SMU.xlsx')
-des = df['Description']
+df = pd.read_excel('cleaned_risk data.xlsx')
+des = df['Cleaned_Description']
 
 genai.configure(api_key=os.environ["GEMINI_API_KEY"])
 
@@ -21,7 +21,7 @@ for i in des:
       Categorize the main risk that is affecting the port activities out of the following: Port Strike, Port Congestion, Port Closure.\n\
       If the text does not fit into any of the above, classify it as Port Disruption.\n\n\
       Output only the final classification.")
-   with open('..\\output\\gemini\\original\\risk_identification.txt', 'a') as f:
+   with open('..\\output\\gemini\\cleaned\\risk_identification.txt', 'a') as f:
       f.write(str(counter) + '. ')
       f.write(response.text)
       f.write('\n\n')
