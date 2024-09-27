@@ -8,7 +8,7 @@ from utils import Article, get_mongodb_collection, clean_text
 
 class MaritimeExecutiveSpider(scrapy.Spider):
     name = 'gcaptain'
-    base_url='https://gcaptain.com/page/{page}/?s={keyword}'
+    base_url='https://gcaptain.com/category/news/page/{page}/?s={keyword}'
     
     def __init__(self, *args, **kwargs):
         super(MaritimeExecutiveSpider, self).__init__(*args, **kwargs)
@@ -48,9 +48,14 @@ class MaritimeExecutiveSpider(scrapy.Spider):
         TEXT_SELECTOR = 'p:not([class])::text'
         TITLE_SELECTOR = 'h1::text'
         
+        # Check the metadata for editorial indication
+        author_meta = response.css('div.meta a.author::text').get()  # Get the author text from meta
+        if author_meta and 'Editorial' in author_meta:
+            self.progress_bar.update(1)
+            return  # Skip this article
         text = ' '.join([clean_text(p) for p in response.css(TEXT_SELECTOR).extract()]).strip()
         title = clean_text(response.css(TITLE_SELECTOR).extract_first() or '')
-        
+        print(title)
         article = Article(
             headline=title,
             description=text,
