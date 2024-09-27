@@ -45,30 +45,32 @@ class MaritimeExecutiveSpider(scrapy.Spider):
             yield response.follow(link, self.parse_article)
 
     def parse_article(self, response):
-        TEXT_SELECTOR = 'p:not([class])::text'
-        TITLE_SELECTOR = 'h1::text'
+        if 'article' in response.url and 'editorial' not in response.url:
+            TEXT_SELECTOR = 'p:not([class])::text'
+            TITLE_SELECTOR = 'h1::text'
 
-        text = ' '.join([clean_text(p) for p in response.css(TEXT_SELECTOR).extract()]).strip()
-        title = clean_text(response.css(TITLE_SELECTOR).extract_first() or '')
+            text = ' '.join([clean_text(p) for p in response.css(TEXT_SELECTOR).extract()]).strip()
+            title = clean_text(response.css(TITLE_SELECTOR).extract_first() or '')
 
-        article = Article(
-            headline=title,
-            description=text,
-            severity="",
-            main_risk="",
-            country="",
-            state="",
-            link=response.url
-        )
+            article = Article(
+                headline=title,
+                description=text,
+                severity="",
+                main_risk="",
+                country="",
+                state="",
+                link=response.url
+            )
 
-        # Save the article to MongoDB
-        self.collection.insert_one(article.to_dict())
-        
-        self.articles_count += 1
-        self.progress_bar.update(1)
+            # Save the article to MongoDB
+            self.collection.insert_one(article.to_dict())
+            
+            self.articles_count += 1
+            self.progress_bar.update(1)
 
-        yield article.to_dict()
-
+            yield article.to_dict()
+        else:
+            self.logger.info(f"Skipping non-article or editorial URL: {response.url}")
     def closed(self, reason):
         self.progress_bar.close()
         print(f"\nTotal articles scraped: {self.articles_count}")
