@@ -1,36 +1,38 @@
-from sklearn.feature_extraction.text import CountVectorizer
-from sklearn.decomposition import LatentDirichletAllocation
+from gensim.corpora.dictionary import Dictionary
+from gensim.models import LdaModel
+from nltk import sent_tokenize, word_tokenize
+from nltk.corpus import stopwords
 
 import pandas as pd
 
-
+# Load the data
 df = pd.read_excel('cleaned_risk data.xlsx')
 des = df['Cleaned_Description'].to_list()
 
-
 counter = 1
-for text_sample in des:
-    # Preprocessing and applying topic modeling (LDA)
-    # Tokenizing the text, removing stop words, and fitting LDA model
-    # Step 1: Convert text to a document-term matrix
-    vectorizer = CountVectorizer(stop_words='english')
-    X = vectorizer.fit_transform([text_sample])
 
-    # Step 2: Apply LDA to find topics
-    lda = LatentDirichletAllocation(n_components=5, random_state=42)
-    lda.fit(X)
+for i in des:
+    doc = sent_tokenize(i)
 
-    # Step 3: Displaying the topics with their top words
-    words = vectorizer.get_feature_names_out()
-    topics = {}
-    for topic_idx, topic in enumerate(lda.components_):
-        top_words = [words[i] for i in topic.argsort()[:-6:-1]]  # Top 5 words per topic
-        topics[f'Topic {topic_idx + 1}'] = top_words
+    tokenized_words = [word_tokenize(sentence) for sentence in doc]
 
-    with open('..\\output\\topic_modelling\\topics.txt', 'a') as f:
+    # Remove stop words
+    cleaned_token = [[word for word in sentence if word.isalpha()] for sentence in tokenized_words]
+
+    # create a dictionary
+    dictionary = Dictionary(cleaned_token)
+
+    # Create a corpus from the document
+    corpus = [dictionary.doc2bow(text) for text in cleaned_token]
+
+    model = LdaModel(corpus=corpus, id2word=dictionary, num_topics=5, random_state=42)
+
+    with open('..\\output\\topic_modelling\\topics1.txt', 'a') as f:
         f.write(f'{counter}.\n')
-        for topic, top_words in topics.items():
-            f.write(f'{topic}: {", ".join(top_words)}\n')
+        for topic in model.show_topics(formatted=False):
+            words = [word[0] for word in topic[1]]
+            f.write(", ".join(words))
+            f.write('\n')
         f.write('\n')
 
     counter += 1
