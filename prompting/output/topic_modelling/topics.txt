@@ -1,203 +1,203 @@
 1.
-Topic 1: workers, updated, invoicing, indefinite, freight
-Topic 2: strike, sources, port, july, workers
-Topic 3: workers, updated, invoicing, indefinite, freight
-Topic 4: workers, updated, invoicing, indefinite, freight
-Topic 5: workers, updated, invoicing, indefinite, freight
+strike, July, suspended, action, sources, authorities, media, Dakar, report, Port
+normal, return, disruptions, likely, with, port, operations, Lingering, backlog, dealt
+sources, operations, dealt, likely, port, July, Lingering, disruptions, strike, backlog
+sources, forwarders, strike, July, regarding, freight, traders, Previous, charges, carriers
+dealt, backlog, Lingering, operations, port, with, likely, disruptions, return, normal
 
 2.
-Topic 1: winds, intelligence, 10, 13, 17
-Topic 2: time, resumed, operations, local, winds
-Topic 3: winds, intelligence, 10, 13, 17
-Topic 4: winds, intelligence, 10, 13, 17
-Topic 5: winds, intelligence, 10, 13, 17
+local, operations, time, resumed, According, July, suspended, Updated, Container, received
+local, time, resumed, operations, According, suspended, July, sources, waterside, intelligence
+time, local, sources, resumed, July, suspended, operations, According, Updated, waterside
+operations, local, time, According, resumed, suspended, July, Container, sources, indicates
+operations, resumed, Durban, Africa, landside, Everstream, following, strong, indicates, winds
 
 3.
-Topic 1: likely, following, interunion, intergremial, indicate
-Topic 2: likely, following, interunion, intergremial, indicate
-Topic 3: likely, following, interunion, intergremial, indicate
-Topic 4: likely, following, interunion, intergremial, indicate
-Topic 5: strike, truckers, port, workers, strikes
+strike, date, confirmed, transport, disruptions, port, likely, Business, truckers, considering
+strike, confirmed, date, transport, port, disruptions, truckers, Business, likely, considering
+workers, port, strikes, repeated, truckers, orders, Friday, Truckers, fulfill, hindered
+strike, port, de, protest, worker, general, truckers, considering, confirmed, date
+likely, Business, disruptions, transport, strike, date, confirmed, port, truckers, general
 
 4.
-Topic 1: yard, wharf, 03, 09, 11
-Topic 2: operations, 00, july, terminal, maintenance
-Topic 3: yard, wharf, 03, 09, 11
-Topic 4: yard, wharf, 03, 09, 11
-Topic 5: yard, wharf, 03, 09, 11
+July, planned, Mumbai, operations, Intelligence, time, terminal, remain, gate, rail
+operations, Mumbai, planned, July, downtime, received, temporarily, halt, Analytics, APM
+Mumbai, July, planned, operations, India, maintenance, terminal, rail, time, suspended
+normal, system, return, Terminal, operations, expected, maintenance, complete, Mumbai, July
+operations, maintenance, complete, Terminal, system, normal, expected, return, July, planned
 
 5.
-Topic 1: upgrade, netherlands, updated, indicates, indicated
-Topic 2: upgrade, netherlands, updated, indicates, indicated
-Topic 3: upgrade, netherlands, updated, indicates, indicated
-Topic 4: time, terminal, july, local, operations
-Topic 5: upgrade, netherlands, updated, indicates, indicated
+time, operations, July, local, complete, expected, upgrade, Terminal, system, normal
+terminal, operations, handling, Delays, likely, Netherlands, unexpected, outage, planned, complications
+time, July, local, would, Terminals, slot, received, intelligence, update, due
+time, operations, likely, Delays, available, terminal, slot, local, return, system
+time, local, update, slot, available, first, July, Everstream, Terminals, Analytics
 
 6.
-Topic 1: week, largely, everstream, dropped, day
-Topic 2: week, largely, everstream, dropped, day
-Topic 3: week, largely, everstream, dropped, day
-Topic 4: vessel, times, port, august, cargo
-Topic 5: week, largely, everstream, dropped, day
+container, cargo, port, daily, average, anchor, vessels, number, individual, contracts
+terminal, cases, levels, vessel, arrivals, cargo, times, wait, backlog, vary
+August, obtained, Lome, average, times, dropped, Port, subsiding, congestion, indicates
+waiting, times, August, port, wait, time, mean, take, vessels, Vessel
+vessels, times, average, container, cargo, port, wait, Vessel, waiting, coming
 
 7.
-Topic 1: week, backlog, day, data, daily
-Topic 2: vessel, times, port, container, average
-Topic 3: week, backlog, day, data, daily
-Topic 4: week, backlog, day, data, daily
-Topic 5: week, backlog, day, data, daily
+times, cargo, Vessel, container, port, vessels, average, waiting, number, time
+July, average, Everstream, Abidjan, Analytics, waiting, Vessel, indicates, week, dropped
+port, vessels, wait, container, cargo, times, waiting, Vessel, take, account
+July, times, obtained, day, data, Port, dropped, week, indicates, Vessel
+may, vessel, times, cargo, levels, contracts, individual, cases, backlog, container
 
 8.
-Topic 1: week, individual, 23, account, analytics
-Topic 2: vessel, times, port, average, wait
-Topic 3: week, individual, 23, account, analytics
-Topic 4: week, individual, 23, account, analytics
-Topic 5: week, individual, 23, account, analytics
+July, stand, week, Analytics, Port, average, times, data, Town, Cape
+times, wait, container, contracts, terminal, due, levels, arrivals, may, backlog
+port, times, vessels, account, take, time, waiting, coming, wait, mean
+July, days, waiting, indicates, Vessel, obtained, Everstream, Cape, Town, data
+cargo, vessels, daily, container, anchor, port, number, average, times, Vessel
 
 9.
-Topic 1: weather, updated, 08, 11, 30
-Topic 2: weather, updated, 08, 11, 30
-Topic 3: weather, updated, 08, 11, 30
-Topic 4: local, time, operations, july, deep
-Topic 5: weather, updated, 08, 11, 30
+July, time, local, operations, conditions, sources, severe, weather, indicated, sea
+due, severe, Previously, terminal, time, indicated, July, sources, suspended, operations
+deep, operations, local, Previously, terminal, suspended, sea, due, weather, indicated
+received, Port, time, II, APM, resumed, report, day, Analytics, Rotterdam
+Updated, operations, day, Maasvlatkte, Terminals, Everstream, resumed, fully, local, July
 
 10.
-Topic 1: updated, media, biggest, confirmed, disrupted
-Topic 2: updated, media, biggest, confirmed, disrupted
-Topic 3: port, july, operations, resumed, attack
-Topic 4: updated, media, biggest, confirmed, disrupted
-Topic 5: updated, media, biggest, confirmed, disrupted
+Nagoya, intelligence, Analytics, resumed, July, Port, confirmed, Japan, received, Everstream
+operations, Updated, Everstream, Japan, received, confirmed, July, Port, resumed, Analytics
+port, July, operations, attack, cyber, Japan, resumed, group, biggest, media
+July, operations, port, resumed, cyber, Japan, attack, received, Previous, Analytics
+July, operations, port, Japan, cyber, resumed, Previously, partially, attack, reported
 
 11.
-Topic 1: workplace, truck, 20, accident, area
-Topic 2: workplace, truck, 20, accident, area
-Topic 3: workplace, truck, 20, accident, area
-Topic 4: workplace, truck, 20, accident, area
-Topic 5: july, port, investigations, 20, accident
+July, result, disruption, ongoing, likely, Investigations, operations, port, occurred, Eurogate
+July, likely, port, Investigations, operations, ongoing, disruption, result, occurred, workplace
+July, truck, incident, individual, Media, workplace, fatal, local, time, container
+July, area, occurred, sources, Eurogate, workplace, report, handling, place, Media
+July, fatal, local, area, report, handling, time, accident, container, took
 
 12.
-Topic 1: writing, wires, large, justice, july
-Topic 2: writing, wires, large, justice, july
-Topic 3: writing, wires, large, justice, july
-Topic 4: writing, wires, large, justice, july
-Topic 5: access, blocked, port, entering, justice
+numbers, deployed, police, Large, area, well, blocked, access, port, provided
+port, access, blocked, prevented, vehicles, roads, reports, terminal, According, laying
+last, writing, information, additional, moment, situation, long, provided, well, area
+well, deployed, Large, area, blocked, port, system, access, provided, police
+disagreements, justice, s, government, overhaul, voice, reason, system, action, indicate
 
 13.
-Topic 1: 00, close, port, vessels, gt
-Topic 2: worsen, manzanillo, 18, 29, 30
-Topic 3: worsen, manzanillo, 18, 29, 30
-Topic 4: worsen, manzanillo, 18, 29, 30
-Topic 5: worsen, manzanillo, 18, 29, 30
+unknown, expected, currently, closure, length, close, June, reported, Mexico, Manzanillo
+June, Pacific, Ocean, close, approach, Industry, southwestern, due, Manzanillo, Hurricane
+unknown, closure, expected, length, currently, June, close, Mexico, sources, vessels
+GT, port, close, vessels, closure, greater, rapidly, mortified, local, two
+close, vessels, port, time, phases, gross, tons, June, could, conditions
 
 14.
-Topic 1: sources, set, 30, according, business
-Topic 2: sources, set, 30, according, business
-Topic 3: sources, set, 30, according, business
-Topic 4: fishery, senoko, port, sources, 30
-Topic 5: sources, set, 30, according, business
+Port, Fishery, Senoko, Jurong, According, businesses, reports, relocate, Business, likely
+Business, likely, disruptions, Senoko, Port, Fishery, relocate, reports, According, businesses
+Port, Media, Fishery, March, end, set, sources, close, Senoko, informed
+Business, disruptions, likely, Senoko, Fishery, Port, reports, Jurong, relocate, businesses
+likely, disruptions, Business, Senoko, Fishery, Port, relocate, businesses, reports, According
 
 15.
-Topic 1: york, intelligence, american, analytics, apm
-Topic 2: york, intelligence, american, analytics, apm
-Topic 3: york, intelligence, american, analytics, apm
-Topic 4: york, intelligence, american, analytics, apm
-Topic 5: july, port, intelligence, american, analytics
+July, port, period, unclear, disruptions, normal, Operations, York, whether, experience
+July, Independence, York, Analytics, Intelligence, port, closed, Day, unknown, reports
+July, reasons, American, June, Everstream, Elizabeth, New, received, Terminals, APM
+July, port, period, Operations, unclear, disruptions, normal, whether, experience, APM
+entire, whether, experience, normal, port, Operations, disruptions, July, unclear, period
 
 16.
-Topic 1: weather, normalized, 01, 17, 30
-Topic 2: weather, normalized, 01, 17, 30
-Topic 3: weather, normalized, 01, 17, 30
-Topic 4: june, time, durban, local, operations
-Topic 5: weather, normalized, 01, 17, 30
+June, operations, time, Durban, Pier, suspended, local, South, report, Container
+June, time, operations, Durban, local, Pier, Container, suspended, Terminal, sources
+June, Durban, Pier, time, operations, local, Container, surrounding, suspended, inclement
+June, time, operations, Pier, Durban, local, suspended, Container, Africa, surrounding
+time, Pier, local, Terminal, June, suspended, Durban, operations, Container, waterside
 
 17.
-Topic 1: week, individual, 25, account, analytics
-Topic 2: vessel, times, port, average, cargo
-Topic 3: week, individual, 25, account, analytics
-Topic 4: week, individual, 25, account, analytics
-Topic 5: week, individual, 25, account, analytics
+average, June, port, vessels, container, number, daily, anchor, cargo, times
+container, times, cargo, wait, vessel, may, contracts, individual, cases, levels
+port, Vessel, take, mean, waiting, vessels, wait, time, times, account
+June, indicates, waiting, obtained, average, stand, Everstream, Douala, Updated, days
+times, vessels, cargo, average, port, wait, container, daily, anchor, waiting
 
 18.
-Topic 1: week, individual, gdansk, fell, everstream
-Topic 2: week, individual, gdansk, fell, everstream
-Topic 3: week, individual, gdansk, fell, everstream
-Topic 4: port, vessel, times, wait, vessels
-Topic 5: week, individual, gdansk, fell, everstream
+arrivals, container, backlog, contracts, due, vessel, cargo, times, levels, vary
+port, times, waiting, vessels, wait, mean, time, coming, account, take
+terminal, individual, may, levels, cargo, contracts, cases, due, wait, times
+port, container, vessels, times, cargo, anchor, fell, average, daily, number
+vessel, obtained, Updated, Port, overall, Gdansk, data, improved, week, Everstream
 
 19.
-Topic 1: july, offer, strike, sources, federal
-Topic 2: workers, withdrawn, able, according, announced
-Topic 3: workers, withdrawn, able, according, announced
-Topic 4: workers, withdrawn, able, according, announced
-Topic 5: workers, withdrawn, able, according, announced
+July, strike, set, previously, take, place, sources, offer, Ports, Updated
+withdrawn, Updated, Workers, indicate, Port, announced, July, strike, Ports, Swedish
+July, strike, set, place, take, previously, offer, Swedish, sources, indicate
+July, strike, place, take, sources, set, previously, offer, Gothenburg, Ports
+offer, sources, negotiating, enough, present, members, delegation, good, able, believes
 
 20.
-Topic 1: week, individual, 19, 25, account
-Topic 2: port, vessel, times, average, wait
-Topic 3: week, individual, 19, 25, account
-Topic 4: week, individual, 19, 25, account
-Topic 5: week, individual, 19, 25, account
+times, cargo, Vessel, container, port, vessels, average, waiting, number, time
+June, average, waiting, Vessel, Everstream, week, Penang, obtained, times, Analytics
+port, vessels, wait, container, cargo, times, waiting, Vessel, take, account
+times, wait, vessels, waiting, container, Vessel, daily, mean, cargo, anchor
+may, vessel, times, cargo, levels, contracts, individual, cases, backlog, container
 
 21.
-Topic 1: week, individual, 19, account, analytics
-Topic 2: week, individual, 19, account, analytics
-Topic 3: week, individual, 19, account, analytics
-Topic 4: port, vessel, times, cargo, wait
-Topic 5: week, individual, 19, account, analytics
+June, waiting, times, average, Vessel, Analytics, week, indicates, Everstream, data
+June, obtained, Port, hours, stand, data, times, Everstream, indicates, week
+cargo, container, average, vessels, port, number, anchor, daily, wait, may
+times, vessels, port, coming, waiting, Vessel, mean, account, time, take
+June, stand, Analytics, indicates, Everstream, average, week, Vessel, obtained, waiting
 
 22.
-Topic 1: week, backlog, everstream, data, daily
-Topic 2: week, backlog, everstream, data, daily
-Topic 3: week, backlog, everstream, data, daily
-Topic 4: port, vessel, times, average, wait
-Topic 5: week, backlog, everstream, data, daily
+times, cargo, Vessel, container, port, vessels, average, waiting, number, time
+June, average, Guangzhou, Analytics, Everstream, waiting, Vessel, obtained, week, indicates
+port, vessels, wait, container, cargo, times, waiting, Vessel, take, account
+June, times, stood, hours, data, Port, indicates, week, obtained, Vessel
+may, vessel, times, cargo, levels, contracts, individual, cases, backlog, container
 
 23.
-Topic 1: week, cases, everstream, dropped, data
-Topic 2: week, cases, everstream, dropped, data
-Topic 3: port, vessel, times, wait, vessels
-Topic 4: week, cases, everstream, dropped, data
-Topic 5: week, cases, everstream, dropped, data
+arrivals, container, backlog, contracts, due, vessel, cargo, times, levels, vary
+port, times, waiting, vessels, wait, mean, time, coming, account, take
+terminal, individual, may, levels, cargo, contracts, cases, due, wait, times
+port, container, vessels, times, cargo, anchor, hours, average, daily, number
+vessel, obtained, Updated, Port, overall, Everstream, data, improved, week, Bangkok
 
 24.
-Topic 1: june, port, 00, closed, time
-Topic 2: writing, congestion, holidays, handling, functions
-Topic 3: writing, congestion, holidays, handling, functions
-Topic 4: writing, congestion, holidays, handling, functions
-Topic 5: writing, congestion, holidays, handling, functions
+port, June, time, may, However, impact, closed, writing, container, restrictions
+June, port, closed, normal, functions, due, offices, hours, customs, holidays
+closed, time, June, container, depots, inland, addition, local, remain, private
+June, operations, container, scheduled, handling, delivery, indicate, sources, media, Chittagong
+time, remains, unclear, port, congestion, restrictions, extent, writing, may, impact
 
 25.
-Topic 1: terminals, terminal, africa, analytics, apm
-Topic 2: terminals, terminal, africa, analytics, apm
-Topic 3: terminals, terminal, africa, analytics, apm
-Topic 4: elizabeth, july, terminals, independence, africa
-Topic 5: terminals, terminal, africa, analytics, apm
+resume, operations, terminal, July, Elizabeth, South, Everstream, Independence, Africa, Analytics
+Elizabeth, received, APM, Holiday, June, Everstream, Terminals, Day, reported, close
+resume, operations, terminal, July, Elizabeth, Africa, Everstream, Analytics, Holiday, received
+July, terminal, operations, resume, Elizabeth, South, Analytics, Port, Africa, Intelligence
+Elizabeth, reported, Africa, Intelligence, June, Port, Independence, Analytics, Terminals, July
 
 26.
-Topic 1: yacht, vessel, 14, 25, 26
-Topic 2: yacht, vessel, 14, 25, 26
-Topic 3: yacht, vessel, 14, 25, 26
-Topic 4: port, june, following, accident, traffic
-Topic 5: yacht, vessel, 14, 25, 26
+one, caused, accident, death, injury, June, traffic, Port, yacht, crash
+accident, traffic, Port, North, removed, vessel, obstructions, local, sunken, time
+one, accident, injury, death, Port, caused, traffic, June, recovered, report
+June, disrupted, Port, traffic, sources, Media, ferry, report, Miami, boat
+one, accident, death, caused, injury, traffic, June, report, Port, crash
 
 27.
-Topic 1: update, unavailable, 12, 20, 23
-Topic 2: update, unavailable, 12, 20, 23
-Topic 3: update, unavailable, 12, 20, 23
-Topic 4: update, unavailable, 12, 20, 23
-Topic 5: 00, sources, june, operations, maintenance
+operations, sources, paused, terminal, According, maintenance, June, unavailable, systems, sever
+operations, paused, sources, According, terminal, June, unavailable, maintenance, period, systems
+online, terminal, According, systems, unavailable, paused, maintenance, operations, sources, period
+period, sources, operations, maintenance, paused, unavailable, systems, According, terminal, online
+June, sources, operations, impact, APM, report, shipping, likely, Terminals, carried
 
 28.
-Topic 1: week, indicates, dropped, day, data
-Topic 2: week, indicates, dropped, day, data
-Topic 3: week, indicates, dropped, day, data
-Topic 4: week, indicates, dropped, day, data
-Topic 5: vessel, times, port, cargo, wait
+container, cargo, port, daily, average, anchor, vessels, number, individual, contracts
+terminal, cases, levels, vessel, arrivals, cargo, times, wait, backlog, vary
+obtained, Everstream, average, times, dropped, congestion, Port, subsiding, indicates, day
+waiting, times, port, wait, time, mean, take, vessels, Vessel, account
+largely, obtained, day, vessel, average, Port, Everstream, subsiding, times, waiting
 
 29.
-Topic 1: week, individual, dropped, day, data
-Topic 2: week, individual, dropped, day, data
-Topic 3: vessel, times, port, cargo, wait
-Topic 4: week, individual, dropped, day, data
-Topic 5: week, individual, dropped, day, data
+cargo, container, times, arrivals, contracts, due, wait, vessel, vary, cases
+time, take, vessels, waiting, mean, port, wait, times, account, Vessel
+June, week, Everstream, congestion, dropped, indicates, obtained, largely, Cape, Town
+coming, Vessel, account, times, wait, port, mean, waiting, vessels, take
+June, subsiding, day, times, Port, Analytics, average, vessel, data, Updated
 

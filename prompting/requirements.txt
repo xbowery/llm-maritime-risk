@@ -1,3 +1,6 @@
 google-generativeai
 openai
 pandas
+mistralai
+nltk
+gensim
