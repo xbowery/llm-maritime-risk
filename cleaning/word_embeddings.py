@@ -58,6 +58,10 @@ def map_to_database(document):
     mapped_document = collection_articles.find_one({"id": document["id"]})
     if mapped_document == None:
         return None
+
+    # ignore the mapping if it is an editorial article
+    if mapped_document.get("is_editorial", False):
+        return None
     new_document = map_document_to_mapped_document(document, mapped_document["link"], mapped_document["headline"], mapped_document["description"])
     return new_document
 
@@ -91,15 +95,9 @@ def add_article_to_model(model, article_tokens):
     model.build_vocab([article_tokens], update=True)
     model.train([article_tokens], total_examples=model.corpus_count, epochs=model.epochs)
 
-def save_to_mongodb(article, db_name, collection_name):
-    # Set up the MongoDB client
-    cluster = MongoClient(os.getenv("DATABASE_CONNECTION"))
-    db = cluster[db_name]
-    collection = db[collection_name]
-
+def save_to_mongodb(article):
     # Insert the article into the collection
-    collection.insert_one(article)
-    print(f"Article with ID {article['id']} saved to MongoDB in {collection_name}.")
+    deduplicated_collection.insert_one(article)
 
 def deduplication_pipeline(articles, threshold=0.8):
     # Initialize the Word2Vec model
@@ -107,11 +105,12 @@ def deduplication_pipeline(articles, threshold=0.8):
     
     # Process each article
     for idx, article in enumerate(articles):
-        print(f"Processing article id: {article["_id"]} at {idx + 1}/{len(articles)}")
+        if idx + 1 % 10 == 0:
+            print(f"Processing article id: {article["_id"]} at {idx + 1}/{len(articles)}")
         
         mapped_article = map_to_database(article)
         if mapped_article == None:
-            print(f"faced a problem at {mapped_article["_id"]}")
+            print(f"faced a problem at {article}")
             continue
 
         # Step 1: Tokenize the article
@@ -120,15 +119,14 @@ def deduplication_pipeline(articles, threshold=0.8):
         # Step 2 & 3: Check if the article is a duplicate
         if model.wv:  # Check if the model already has some words
             if calculate_similarity(model, article_tokens, threshold):
-                print(f"Article {idx + 1} is a duplicate.")
+                print(f"Article {mapped_article["_id"]} is a duplicate.")
                 continue
         
         # Step 4: Add the article to the model
         add_article_to_model(model, article_tokens)
-        print(f"Article {idx + 1} added to the model.")
     
         # Step 5: Save the non-duplicate article to a separate MongoDB collection
-        save_to_mongodb(article, db_name="llm-maritime-risk", collection_name="NonDuplicateArticles")
+        save_to_mongodb(article)
 
     print("Deduplication process complete.")
 
@@ -138,4 +136,3 @@ def main():
 
 if __name__ == "__main__":
     main()
-
