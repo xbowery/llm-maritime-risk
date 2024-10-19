@@ -1,0 +1,25 @@
+1. Disruption event: Collapse of the Francis Scott Key Bridge, suspending vessel traffic.
+Port Affected: Port of Baltimore
+Date: April 3rd 
+
+
+2. Disruption event: ZPMC is transitioning from selling equipment to selling systems, software, and services.
+Port Affected: Not specified. 
+Date: Not specified. 
+
+
+3. Disruption event: Houthi attacks off Yemen forced tankers to reroute around the Cape of Good Hope.
+Port Affected: Red Sea ports (implied, not specified)
+Date: Not mentioned, but implied to be recent, within the past two years. 
+
+
+4. Disruption event: The COVID-19 pandemic disrupted global shipping and caused economic fallout.
+Port Affected: Not mentioned in the context.
+Date: April 2020 (mentioned in the context) 
+
+
+5. Disruption event: Implementation of a new Terminal Operating System (TOS) software suite at Felixstowe port.
+Port Affected: Port of Felixstowe
+Date: June 2023 
+
+
