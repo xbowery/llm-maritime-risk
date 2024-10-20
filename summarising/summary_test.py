@@ -1,4 +1,5 @@
 import google.generativeai as genai
+from google.generativeai.types import HarmCategory, HarmBlockThreshold
 from dotenv import load_dotenv
 import os
 from pymongo import MongoClient
@@ -11,7 +12,7 @@ load_dotenv()
 cluster = MongoClient(os.getenv("DATABASE_CONNECTION"))
 db = cluster['llm-maritime-risk']
 collection = db["Articles"]
-collection_articles = collection.find({"is_checked": False}).limit(50)
+collection_articles = collection.find({"is_checked": False}).limit(500)
 
 
 genai.configure(api_key=os.environ["GEMINI_API_KEY"])
@@ -44,9 +45,16 @@ for article in collection_articles:
 
       Headline: '{article["headline"]}'
       Content: '{article["description"]}'
-  """)
+  """,
+  safety_settings={
+    HarmCategory.HARM_CATEGORY_HATE_SPEECH: HarmBlockThreshold.BLOCK_NONE, 
+    HarmCategory.HARM_CATEGORY_SEXUALLY_EXPLICIT: HarmBlockThreshold.BLOCK_NONE, 
+    HarmCategory.HARM_CATEGORY_DANGEROUS_CONTENT: HarmBlockThreshold.BLOCK_NONE, 
+    HarmCategory.HARM_CATEGORY_HARASSMENT: HarmBlockThreshold.BLOCK_NONE
+  })
   print(f"Saving article...") 
-  with open('output/gemini/summary_official3.txt', 'a') as f:
+
+  with open('output/gemini/summary_official6.txt', 'a') as f:
     f.write(f"id: {article["_id"]}\n")
     f.write(response.text)
     f.write('\n\n')
