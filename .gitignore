@@ -4,3 +4,4 @@
 *.log
 *_venv/
 __pycache__/
+*.txt
