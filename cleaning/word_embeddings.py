@@ -142,15 +142,12 @@ def deduplication_pipeline(articles, threshold):
     print("Deduplication process complete.")
 
 def main():
-    files = [
-        '../summarising/output/gemini/summary_official.txt',
-        '../summarising/output/gemini/summary_official2.txt',
-        '../summarising/output/gemini/summary_official3.txt',
-             ]
     articles = []
-    for file in files:
-        articles.append(get_documents(file))
-    deduplication_pipeline(articles[:100], threshold=0.7)
+    articles = get_documents('../summarising/output/gemini/summary_official.txt')
+    for i in range(2, 15):
+        articles.append(get_documents(f'../summarising/output/gemini/summary_official{i}.txt',))
+
+    deduplication_pipeline(articles, threshold=0.8)
 
 if __name__ == "__main__":
     main()
