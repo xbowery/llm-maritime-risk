@@ -131,11 +131,12 @@ def map_articles_to_preprocessed_collection():
         processed_article['extracted date'] = response_results.get("Date")
 
         processed_article['is new'] = True
+        processed_article['is unique'] = True
 
         processed_articles_collection.insert_one(processed_article)
         if counter % 10 == 0:
             print(f"Processed {counter}/{expected_to_process} Articles!")
-        if counter == 1450:
+        if counter == 700:
             print("Exited because APIKey finishing")
             break
         counter += 1
