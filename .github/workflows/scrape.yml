@@ -19,7 +19,7 @@ jobs:
       - name: Install python dependencies
         uses: actions/setup-python@v5
         with:
-          python-version: 3.10
+          python-version: 3.8
           cache: pip
       - name: Install libraries
         run: pip3 install -r ./scraping/requirements.txt
