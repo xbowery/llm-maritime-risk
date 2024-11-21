@@ -15,6 +15,7 @@ class Article:
 
     def to_dict(self):
         return {
+            "_id": self.link,
             "headline": self.headline,
             "description": self.description,
             "severity": self.severity,

@@ -67,7 +67,7 @@ class MaritimeExecutiveSpider(scrapy.Spider):
         )
         
         # Save the article to MongoDB
-        self.collection.insert_one(article.to_dict())
+        self.collection.update_one({"_id": article.link}, {"$set": article.to_dict()}, upsert=True)
         print(article.headline)
         self.articles_count += 1
         self.progress_bar.update(1)
