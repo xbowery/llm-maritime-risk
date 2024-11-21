@@ -108,7 +108,7 @@ def map_articles_to_preprocessed_collection():
     scraped_articles_collection = db['Articles']
     processed_articles_collection = db['Processed_Articles']
 
-    scraped_articles = scraped_articles_collection.find()
+    scraped_articles = scraped_articles_collection.find().limit(30)
     processed_articles = processed_articles_collection.find()
 
     # for logs purpose
@@ -135,6 +135,10 @@ def map_articles_to_preprocessed_collection():
         processed_articles_collection.insert_one(processed_article)
         if counter % 10 == 0:
             print(f"Processed {counter}/{expected_to_process} Articles!")
+        if counter == 1450:
+            print("Exited because APIKey finishing")
+            break
         counter += 1
+    print("Finished!")
 
 map_articles_to_preprocessed_collection()
