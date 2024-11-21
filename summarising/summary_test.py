@@ -20,7 +20,7 @@ genai.configure(api_key=os.environ["GEMINI_API_KEY"])
 model = genai.GenerativeModel("gemini-1.5-flash")
 counter = 0
 
-# Risk Identification given 3 choices, last choice as Port Disruption.
+# Risk Identification
 for article in collection_articles:
   if article['is_checked']:
     continue

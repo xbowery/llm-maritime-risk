@@ -22,16 +22,11 @@ for index, row in df.iterrows():
     Content: '{row["Cleaned_Description"]}'
 
     ## Your Role
-    You are a consultant specialized in maritime and international trading, and an Information Extractor & Summarization Expert. 
-    You must accurately classify the type of port risk based on collected newspaper articles, as well as provide key details about the event. 
+    You are a consultant specialized in maritime and international trading. 
     This is extremely important because any inaccurate classification or lack of details can lead to a loss of over a million dollars due to suboptimal route planning.
 
     ## Your Task
-    - Summarize the event details in 30 words or less, and include:
-        - Disruption event:
-        - Port Affected:
-        - Date:
-    - Additionally, provide the final risk classification based on the article given. If unsure, reflect and revise if necessary. The categories you can include are:
+    - Provide the final risk classification based on the article given. If unsure, reflect and revise if necessary. The categories you can include are:
         - Vessel Delay: Delays in vessel schedules affecting port operations and shipping timelines.
         - Vessel Accidents: Accidents involving vessels, impacting safety, cargo, and port operations.
         - Maritime Piracy/Terrorism Risk: Risks from piracy or terrorism targeting vessels, cargo, or routes.
@@ -47,9 +42,6 @@ for index, row in df.iterrows():
         - Not maritime-related: Events unrelated to maritime activities or not impacting the maritime sector.
 
     ### Format
-    Disruption event: <event summary>
-    Port Affected: <port name>
-    Date: <date>
     Final Classification: <classification>
     """,
   safety_settings={
@@ -58,7 +50,7 @@ for index, row in df.iterrows():
     HarmCategory.HARM_CATEGORY_DANGEROUS_CONTENT: HarmBlockThreshold.BLOCK_NONE, 
     HarmCategory.HARM_CATEGORY_HARASSMENT: HarmBlockThreshold.BLOCK_NONE
   })
-   with open('../output/filtered_overall/prompt_and_cleaned/risk_identification2.txt', 'a') as f:
+   with open('../output/filtered_overall/prompt_and_cleaned/risk_identification.txt', 'a') as f:
       f.write(str(counter) + '. ')
       f.write(response.text)
       f.write('\n\n')

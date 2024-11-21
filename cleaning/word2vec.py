@@ -11,10 +11,6 @@ import logging
 from typing import List, Dict, Any
 from bson import ObjectId
 
-# # Set up logging
-# logging.basicConfig(level=logging.INFO)
-# logger = logging.getLogger(__name__)
-
 # Load environment variables
 load_dotenv()
 DATABASE_CONNECTION = os.getenv("DATABASE_CONNECTION")
@@ -49,7 +45,6 @@ def get_documents(filename: str) -> List[Dict[str, str]]:
     return documents
 
 def extract_document(block: str) -> Dict[str, str]:
-    """Extract a document's details from a given block of text."""
     id_match = re.search(r"(\S+)", block)  # Capture the ID (non-whitespace characters)
     event_match = re.search(r"Disruption event:\s*(.*?)(?=Port Affected:|$)", block, re.DOTALL)
     port_match = re.search(r"Port Affected:\s*(.*?)(?=Date:|$)", block, re.DOTALL)
@@ -73,7 +68,6 @@ def map_document_to_mapped_document(document: Dict[str, str], link: str, headlin
     return document
 
 def map_to_database(document: Dict[str, str]) -> Dict[str, Any]:
-    """Fetch and map the article details from the database."""
     mapped_document = db['Articles'].find_one({"_id": ObjectId(document["_id"])})
     if mapped_document is None:
         print(f"Faced a problem because None, {document['_id']}")
@@ -87,7 +81,6 @@ def map_to_database(document: Dict[str, str]) -> Dict[str, Any]:
     return map_document_to_mapped_document(document, mapped_document["link"], mapped_document["headline"], mapped_document["description"])
 
 def tokenize(text: str) -> List[str]:
-    """Tokenize the input text into words."""
     words = [word.lower() for sentence in sent_tokenize(text) for word in word_tokenize(sentence)]
     return words
 
@@ -111,7 +104,6 @@ def add_article_to_model(model, article_tokens):
     model.train([article_tokens], total_examples=1, epochs=model.epochs)  # Train the model
 
 def save_to_mongodb(article) -> None:
-    """Insert deduplicated article and update the original collection."""
     try:
         article_id = article["_id"]
         if isinstance(article_id, str):
@@ -172,7 +164,6 @@ def deduplication_pipeline(articles, threshold=0.9):
     print("Deduplication process complete.")
 
 def main() -> None:
-    """Main function to execute the deduplication pipeline."""
     articles = []
     articles.extend(get_documents('../summarising/output/gemini/summary_official.txt'))
     
