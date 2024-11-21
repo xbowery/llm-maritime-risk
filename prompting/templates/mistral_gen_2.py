@@ -29,7 +29,8 @@ def classify_risk(description):
     - You must give a risk classification.
     - After giving your final answer, think: are you sure of it? Reflect on it and provide a new answer if you are unsure.
 
-    Output only the final risk classification. An example of your answer should be: Port Disruption.
+    ## Your Output
+    Output only the final risk classification without the explanation after you have done your reflection. An example of your answer should be: Port Disruption.
     """
     
     chat_response = client.chat.complete(

@@ -27,9 +27,10 @@ def classify_risk(description):
     - There are 4 main risks: Port Strike, Port Disruption, Port Closure, and Port Congestion. Print what you know about the difference between the different risks.
     - Based on the articles given, think step by step and provide the final risk classification.
     - You must give a risk classification.
-    - After giving your final answer, think: are you sure of it? Reflect on it and provide a new answer if you are unsure.
+    - After giving your answer, think: are you sure of it? Reflect on it and provide a new answer if you are unsure.
 
-    Output only the final risk classification. An example of your answer should be: Port Disruption.
+    ## Your Output
+    Output only the final risk classification after your reflection. Omit your explanations and reflections. An example of your answer should be: Port Disruption.
     """
     
     chat_response = client.chat.complete(
@@ -50,7 +51,7 @@ for i in des:
     try:
         result = classify_risk(i)
         
-        with open('..\\output\\mistral\\prompt_and_cleaned\\risk_identification.txt', 'a') as f:
+        with open('..\\output\\mistral\\prompt_and_cleaned\\risk_identification1.txt', 'a') as f:
             f.write(str(counter) + '. ')
             f.write(result)
             f.write('\n\n')
@@ -61,7 +62,7 @@ for i in des:
         
     except Exception as e:
         print(f"Error on description {counter}: {e}")
-        with open('..\\output\\mistral\\prompt_and_cleaned\\risk_identification.txt', 'a') as f:
+        with open('..\\output\\mistral\\prompt_and_cleaned\\risk_identification1.txt', 'a') as f:
             f.write(str(counter) + '. ')
             f.write("Error occurred")
             f.write('\n\n')
