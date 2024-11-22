@@ -62,15 +62,6 @@ classifier = MaritimeRiskClassifier(
 )
 ```
 
-### Classification Parameters
-```python
-results = classifier.analyze_incidents(
-    data=incidents,
-    confidence_threshold=0.6,    # Minimum confidence score
-    include_reasoning=True       # Include model reasoning
-)
-```
-
 ## Error Handling
 
 The system includes robust error handling for:
@@ -112,23 +103,6 @@ Required libraries:
   - Dataset size
   - Analysis depth
   - API response times
-
-## Example Usage
-
-```python
-# Initialize classifier
-classifier = MaritimeRiskClassifier()
-
-# Load and process data
-incidents = pd.read_csv('maritime_incidents.csv')
-results = classifier.analyze_incidents(incidents)
-
-# View results
-print(results.summary())
-
-# Export classifications
-results.to_excel('risk_classifications.xlsx')
-```
 
 ## Results Analysis
 
