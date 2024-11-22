@@ -5,6 +5,7 @@ on:
         workflows: ["Scrape latest data"]
         types:
             - completed
+    workflow_dispatch:
 
 
 jobs:
@@ -22,8 +23,15 @@ jobs:
                   cache: pip
             - name: Install libraries
               run: pip3 install -r ./summarising/requirements.txt
+            - name: Cache NLTK Data
+              uses: actions/cache@v3
+              with:
+                path: ~/.nltk_data
+                key: nltk-data-${{ runner.os }}
+            - name: Download NLTK Data
+              run: python -c "import nltk; nltk.download('stopwords'); nltk.download('wordnet')"
             - name: Run the summariser
               env:
                   DATABASE_CONNECTION: ${{ secrets.DATABASE_CONNECTION }}
                   GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
-              run: python3 ./summarising/summariser.py
+              run: python3 ./summarising/summarize.py

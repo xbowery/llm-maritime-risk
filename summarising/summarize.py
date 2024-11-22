@@ -20,8 +20,8 @@ load_dotenv()
 cluster = MongoClient(os.getenv("DATABASE_CONNECTION"))
 db = cluster['llm-maritime-risk']
 
-nltk.download('stopwords')
-nltk.download('wordnet')
+# nltk.download('stopwords')
+# nltk.download('wordnet')
 stop_words = set(stopwords.words('english'))
 lemma = WordNetLemmatizer()
 
@@ -108,7 +108,7 @@ def map_articles_to_preprocessed_collection():
     scraped_articles_collection = db['Articles']
     processed_articles_collection = db['Processed_Articles']
 
-    scraped_articles = scraped_articles_collection.find().limit(30)
+    scraped_articles = scraped_articles_collection.find()
     processed_articles = processed_articles_collection.find()
 
     # for logs purpose
