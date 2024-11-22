@@ -1,0 +1,31 @@
+name: Deduplicate articles
+
+on:
+    workflow_run:
+        workflows: ["Summarise data"]
+        types:
+            - completed
+    workflow_dispatch:
+
+jobs:
+  deduplicate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out this repo
+        uses: actions/checkout@v2
+        with:
+            fetch-depth: 0
+      - name: Install python dependencies
+        uses: actions/setup-python@v5
+        with:
+            python-version: 3.9
+            cache: pip
+      - name: Install libraries
+        run: pip3 install -r ./cleaning/requirements.txt
+      - name: Run the deduplication
+        env:
+            DATABASE_CONNECTION: ${{ secrets.DATABASE_CONNECTION }}
+        run: |
+            cd ./cleaning
+            curl -L -o ./glove.6B.300d.txt https://osf.io/download/xv6h8/
+            python3 deduplicate.py
