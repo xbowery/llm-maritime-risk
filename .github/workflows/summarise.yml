@@ -23,6 +23,13 @@ jobs:
                   cache: pip
             - name: Install libraries
               run: pip3 install -r ./summarising/requirements.txt
+            - name: Cache NLTK Data
+              uses: actions/cache@v3
+              with:
+                path: ~/.nltk_data
+                key: nltk-data-${{ runner.os }}
+            - name: Download NLTK Data
+              run: python -c "import nltk; nltk.download('stopwords'); nltk.download('wordnet')"
             - name: Run the summariser
               env:
                   DATABASE_CONNECTION: ${{ secrets.DATABASE_CONNECTION }}

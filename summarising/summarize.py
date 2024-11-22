@@ -20,8 +20,8 @@ load_dotenv()
 cluster = MongoClient(os.getenv("DATABASE_CONNECTION"))
 db = cluster['llm-maritime-risk']
 
-nltk.download('stopwords')
-nltk.download('wordnet')
+# nltk.download('stopwords')
+# nltk.download('wordnet')
 stop_words = set(stopwords.words('english'))
 lemma = WordNetLemmatizer()
 
