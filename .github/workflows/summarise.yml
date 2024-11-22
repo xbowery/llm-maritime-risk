@@ -5,6 +5,7 @@ on:
         workflows: ["Scrape latest data"]
         types:
             - completed
+    workflow_dispatch:
 
 
 jobs:
@@ -26,4 +27,4 @@ jobs:
               env:
                   DATABASE_CONNECTION: ${{ secrets.DATABASE_CONNECTION }}
                   GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
-              run: python3 ./summarising/summariser.py
+              run: python3 ./summarising/summarize.py
