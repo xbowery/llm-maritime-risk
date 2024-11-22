@@ -72,10 +72,10 @@ def update_database(article):
 
 def generate_category():
     processed_articles_collection = db['Processed_Articles']
-    empty_category_articles = processed_articles_collection.find({"main_risk": ""})
+    empty_category_articles = processed_articles_collection.find({"main_risk": "", "is unique": True})
 
     # for logs purpose
-    expected_to_process = processed_articles_collection.count_documents({"main_risk": ""})
+    expected_to_process = processed_articles_collection.count_documents({"main_risk": "", "is unique": True})
     print(f"Expected {expected_to_process} articles to process")
     counter = 1
 
