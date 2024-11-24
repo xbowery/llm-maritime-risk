@@ -20,6 +20,12 @@ genai.configure(api_key=os.environ["GEMINI_API_KEY"])
 model = genai.GenerativeModel("gemini-1.5-flash")
 
 def get_category(article):
+    output = list(db['Risk_Categories'].find())
+
+    categories = ""
+    for category in output:
+        categories += f"\t- {category['Category']}: {category['Description']}\n"
+
     response = model.generate_content(f"""Given the following text: 
                                       
     {article['summary']}
@@ -29,19 +35,7 @@ def get_category(article):
     This is extremely important because any inaccurate classification or lack of details can lead to a loss of over a million dollars due to suboptimal route planning.
     ## Your Task
     - These are the categories of risks:
-        - Vessel Delay: Delays in vessel schedules affecting port operations and shipping timelines.
-        - Vessel Accidents: Accidents involving vessels, impacting safety, cargo, and port operations.
-        - Maritime Piracy/Terrorism Risk: Risks from piracy or terrorism targeting vessels, cargo, or routes.
-        - Port or Important Route Congestion: Congestion at ports or critical routes, delaying vessel movement.
-        - Port Criminal Activities: Illegal activities at ports, impacting security and cargo safety.
-        - Cargo Damage and Loss: Loss or damage to cargo during transportation or handling processes.
-        - Inland Transportation Risks: Risks in land transport affecting cargo or vessel schedules.
-        - Environmental Impact and Pollution: Pollution or environmental damage caused by maritime activities or spills.
-        - Natural Extreme Events and Extreme Weather: Severe weather or natural events affecting maritime routes or ports.
-        - Cargo or Ship Detainment: Cargo or vessels detained due to inspections, regulations, or disputes.
-        - Unstable Regulatory and Political Environment: Political instability or regulatory changes affecting maritime operations.
-        - Others: Maritime events outside predefined categories requiring separate classification.
-        - Not maritime-related: Events unrelated to maritime activities or not impacting the maritime sector.
+    {categories}
     - Based on the article given, think step by step and provide the final risk classification.
     - You must give a single final risk classification.
     - After giving your final answer, think: are you sure of it? Reflect on it and provide a new answer if you are unsure.
