@@ -12,18 +12,16 @@ from pymongo import MongoClient
 import google.generativeai as genai
 import torch
 from transformers import pipeline
+import certifi
 
 ## set up global variables
 load_dotenv()
 
-# Check if the connection string already has parameters
-connection_string = os.getenv("DATABASE_CONNECTION")
-if '?' in connection_string:
-    connection_string += '&tlsAllowInvalidCertificates=true'
-else:
-    connection_string += '?tlsAllowInvalidCertificates=true'
 
-cluster = MongoClient(connection_string)
+cluster = MongoClient(
+        os.getenv("DATABASE_CONNECTION"),
+        tlsCAFile=certifi.where()
+    )
 db = cluster['llm-maritime-risk']
 
 api_key = os.getenv("GEMINI_API_KEY")
@@ -131,13 +129,13 @@ class MaritimeRiskClassifier:
                 raise ValueError("Invalid model choice. Use 'zero-shot' or 'gemini'.")
 
             # Update article with severity and severity label
-            articles_collection.update_one(
+            """ articles_collection.update_one(
                 {"_id": article["_id"]},
                 {"$set": {
                     "severity": prediction["severity_level"],
                     "severity_label": prediction["severity_label"]
                 }}
-            )
+            ) """
 
         print(f"Finished processing {len(articles)} articles!")
 
