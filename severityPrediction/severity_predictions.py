@@ -16,7 +16,14 @@ from transformers import pipeline
 ## set up global variables
 load_dotenv()
 
-cluster = MongoClient(os.getenv("DATABASE_CONNECTION"))
+# Check if the connection string already has parameters
+connection_string = os.getenv("DATABASE_CONNECTION")
+if '?' in connection_string:
+    connection_string += '&tlsAllowInvalidCertificates=true'
+else:
+    connection_string += '?tlsAllowInvalidCertificates=true'
+
+cluster = MongoClient(connection_string)
 db = cluster['llm-maritime-risk']
 
 api_key = os.getenv("GEMINI_API_KEY")
@@ -63,6 +70,12 @@ class MaritimeRiskClassifier:
             Respond with only the severity level as a single number (1, 2, 3, 4, or 5).
             """
         
+    def clean_input(self, text):
+        """Clean input text."""
+        if text is None:
+            return ""
+        return str(text).strip()
+        
     def predict_zero_shot(self, headline, description, main_risk):
         """Predict severity using Zero-Shot Classifier."""
         headline = self.clean_input(headline)
@@ -102,7 +115,7 @@ class MaritimeRiskClassifier:
     def classify_severity_articles(self, use_model="zero-shot"):
         """Process articles using the specified model (zero-shot or gemini)."""
         articles_collection = db['Processed_Articles']
-        articles = list(articles_collection.find({"is unique": True}))
+        articles = list(articles_collection.find().limit(5))
 
         for article in tqdm(articles, desc="Processing Articles"):
             headline = article.get("headline", "")
