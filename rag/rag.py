@@ -9,6 +9,19 @@ from kneed import KneeLocator
 from openai import OpenAI
 from collections import Counter
 import dotenv
+from pymongo import MongoClient
+from pymongo.database import Database
+from pymongo import UpdateOne
+from dotenv import load_dotenv
+import os
+import pandas as pd
+import sys
+
+# setting path to import from sibling directory
+sys.path.append('..')
+from prompting.templates.category_generator import get_category, parse_response
+
+load_dotenv()
 
 class EmptyDataFrameError(Exception):
     """Raised when the DataFrame after filtering is empty."""
@@ -113,74 +126,60 @@ class MaritimeRiskRAG:
             for distance, idx in zip(distances[0], indices[0])
         ]
     
+    def update_database_categories(
+        self,
+        db: Database,
+        original_data: pd.DataFrame,
+        clusters: np.ndarray,
+        cluster_names: List[str]
+    ) -> None:
+        """
+        Update the final_risk column in the database with newly discovered risk categories.
+        
+        Args:
+            db: MongoDB database connection
+            original_data: Original DataFrame containing the articles
+            clusters: Cluster assignments for each article
+            cluster_names: Names of the discovered clusters/categories
+        """
+        # Get indices of articles with 'Others' category
+        others_mask = original_data['main_risk'] == 'Others'
+        others_indices = original_data[others_mask].index
+        
+        # Create a mapping of document IDs to new categories
+        updates = []
+        for idx, cluster_idx in zip(others_indices, clusters):
+            doc_id = original_data.loc[idx, '_id']
+            new_category = cluster_names[cluster_idx]
+            
+            updates.append(UpdateOne(
+                {'_id': doc_id},
+                {'$set': {'final_risk': new_category}}
+            ))
+            
+        # Perform bulk update
+        if updates:
+            result = db['Processed_Articles'].bulk_write(updates)
+            print(f"Updated {result.modified_count} documents in the database")
+    
     def generate_category(
         self,
         texts: List[str],
-        filter_others: bool = True
     ) -> str:
-        """
-        Generate a risk category description from similar texts using OpenAI.
-        
-        Args:
-            texts: List of text strings to categorize
-            filter_others: Whether to exclude common categories
-            
-        Returns:
-            Generated risk category name
-        """
-        combined_text = " ".join(texts)
-        example_categories = [
-            "Vessel Delay", "Vessel Accidents", "Piracy", "Route Congestion",
-            "Port Criminal Activity", "Cargo Damage and Loss",
-            "Inland Transportation Risk", "Environmental Impact and Pollution",
-            "Extreme Weather", "Cargo Detainment"
-        ]
-        
-        prompt_template = """
-        You are a maritime risk analysis assistant. Below is a list of common maritime risk categories{exclusion}:
-        {categories}
-        
-        Based on the recent maritime incidents described here:
-        "{incidents}"
-        
-        Generate the most suitable risk category for these incidents.{instruction} Please provide only a single category.
-        
-        Risk Category:
-        """
-        
-        exclusion = " (do NOT use any of these)" if filter_others else ""
-        instruction = (
-            " Do NOT use any of the listed categories. Instead, create a unique risk category."
-            if filter_others else
-            " Use one of the listed categories if it fits, or create a new one if needed."
-        )
-        
-        prompt = prompt_template.format(
-            exclusion=exclusion,
-            categories=", ".join(example_categories),
-            incidents=combined_text,
-            instruction=instruction
-        )
-        
-        response = self.client.chat.completions.create(
-            model=self.generator_model,
-            messages=[
-                {"role": "system", "content": "You are a specialized assistant in maritime risk analysis, providing concise and accurate risk categories."},
-                {"role": "user", "content": prompt}
-            ],
-            max_tokens=100,
-            temperature=0
-        )
-        
-        return response.choices[0].message.content.strip()
+        response = get_category(texts, new=True)
+        response = parse_response(response.text)
+        category, description = response.split(': ')
+
+        return category, description
     
     def discover_risk_categories(
         self,
         data: pd.DataFrame,
+        db: Database,
         k_range: range = range(2, 10),
         method: str = 'silhouette',
-        filter_others: bool = False,
-        samples_per_cluster: int = 30
+        samples_per_cluster: int = 20,
+        minimum_samples: int = 500
     ) -> Tuple[List[Dict[str, Union[str, List[str], int]]], np.ndarray]:
         """
         Discover risk categories from texts using clustering and RAG.
@@ -189,19 +188,17 @@ class MaritimeRiskRAG:
             data: DataFrame containing disruption events
             k_range: Range of cluster numbers to try
             method: Clustering method ('elbow', 'silhouette', or 'both')
-            filter_others: Whether to analyze only "Others" category
             samples_per_cluster: Number of samples to use per cluster for category generation
             
         Returns:
             Tuple of (categories list, cluster assignments)
         """
-        if filter_others:
-            data = data[data['Final Classification'] == "Others"]
-            if len(data) == 0:
-                raise EmptyDataFrameError(
-                    "No articles with 'Others' category found in the provided data."
-                )
-        texts = data['Disruption event'].tolist()
+        data = data[data['main_risk'] == "Others"]
+        if len(data) < minimum_samples:
+            raise EmptyDataFrameError(
+                f"minimum_samples is currently set to {minimum_samples} while there are only {len(data)} articles categorized as 'Others'. You can reduce the 'minimum_samples' parameter if you still want to proceed."
+            )
+        texts = data['summary'].tolist()
         
         if self.index is None:
             self.build_index(texts)
@@ -213,6 +210,8 @@ class MaritimeRiskRAG:
         clusters = kmeans.fit_predict(embeddings)
         
         categories = []
+
+        print('Generating risk categories..')
         for i in range(optimal_k):
             cluster_texts = [
                 text for text, cluster in zip(texts, clusters)
@@ -225,12 +224,21 @@ class MaritimeRiskRAG:
             n = min(samples_per_cluster, len(cluster_texts))
             sampled_texts = cluster_texts[:n]
             
+            category, desc = self.generate_category(sampled_texts)
             categories.append({
-                'category': self.generate_category(sampled_texts, filter_others),
+                'category': category,
                 'sample_texts': sampled_texts,
-                'size': len(cluster_texts)
+                'size': len(cluster_texts),
+                'description': desc
             })
             
+            # Insert new category to db
+            document = {
+                "Category": category,
+                "Description": desc
+            }
+            db['Risk_Categories'].insert_one(document)
+        
         return categories, clusters
 
     def _find_optimal_k(
@@ -292,7 +300,8 @@ class MaritimeRiskRAG:
             optimal_k = best_silhouette_k
         else:  # both
             optimal_k = round((elbow_k + best_silhouette_k) / 2)
-            
+        
+        print(f'{optimal_k} clusters found!')
         return optimal_k, metrics
 
 def format_risk_analysis(
@@ -324,24 +333,25 @@ if __name__ == '__main__':
         
         # Load the data
         print('Loading the Data..')
-        filename = 'data_new.xlsx'
         try:
-            data = pd.read_excel(filename, index_col=0)
-        except FileNotFoundError:
-            print(f"Error: File '{filename}' not found.")
-            exit(1)
+            cluster = MongoClient(os.getenv("DATABASE_CONNECTION"))
+            db = cluster['llm-maritime-risk']
+            collection = db["Processed_Articles"]
+            data = pd.DataFrame(list(collection.find({})))
+            size = collection.count_documents({})
+            print(f'{size} articles loaded!')
         except Exception as e:
             print(f"Error loading data: {str(e)}")
             exit(1)
 
         # Discover risk categories
-        print('Running the Pipeline')
+        print('Running the Pipeline..')
         try:
             categories, clusters = rag.discover_risk_categories(
                 data,
+                db,
                 k_range=range(2, 10),
                 method='silhouette',
-                filter_others=True
             )
         except EmptyDataFrameError as e:
             print(f"Error: {str(e)}")
@@ -361,15 +371,24 @@ if __name__ == '__main__':
         counts = Counter(classes)
         print(counts)
 
-        # Export data
+        # Update the database with new categories
+        print("Updating database with new categories...")
         try:
-            data_copy = data.copy()
-            data_copy.loc[data_copy['Final Classification'] == 'Others', 'Final Classification'] = list(map(lambda x: cluster_names[x], clusters))
-            data_copy.to_excel('data_new_categories.xlsx')
-            print(f'Data exported to data_new_categories.xlsx!')
+            rag.update_database_categories(db, data, clusters, cluster_names)
+            print("Database update completed successfully!")
         except Exception as e:
-            print(f"Error exporting data: {str(e)}")
+            print(f"Error updating database: {str(e)}")
             exit(1)
+
+        # Export data
+        # try:
+        #     data_copy = data.copy()
+        #     data_copy.loc[data_copy['main_risk'] == 'Others', 'main_risk'] = list(map(lambda x: cluster_names[x], clusters))
+        #     data_copy.to_excel('data_new_categories.xlsx')
+        #     print(f'Data exported to data_new_categories.xlsx!')
+        # except Exception as e:
+        #     print(f"Error exporting data: {str(e)}")
+        #     exit(1)
             
     except Exception as e:
         print(f"Unexpected error: {str(e)}")
