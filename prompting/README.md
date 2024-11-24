@@ -25,3 +25,11 @@ For OpenAI (GPT-4o):
 ```bash
 python openai_gen.py
 ```
+
+For Mistral:
+```bash
+python mistral_gen.py
+```
+
+## Running the pipeline
+Please run `store_categories.py` first to store all categories into the database, followed by `extract_categories.py`.
