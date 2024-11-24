@@ -1,0 +1,26 @@
+name: Predict Severity
+
+on:
+    workflow_dispatch:
+
+
+jobs:
+    summarise:
+        runs-on: ubuntu-latest
+        steps:
+            - name: Check out this repo
+              uses: actions/checkout@v2
+              with:
+                  fetch-depth: 0
+            - name: Install python dependencies
+              uses: actions/setup-python@v5
+              with:
+                  python-version: 3.9
+                  cache: pip
+            - name: Install libraries
+              run: pip3 install -r ./severityPrediction/requirements.txt
+            - name: Run the severity prediction
+              env:
+                  DATABASE_CONNECTION: ${{ secrets.DATABASE_CONNECTION }}
+                  GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+              run: python3 ./severityPrediction/severity_predictions.py
