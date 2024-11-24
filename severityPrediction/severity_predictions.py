@@ -115,7 +115,7 @@ class MaritimeRiskClassifier:
     def classify_severity_articles(self, use_model="zero-shot"):
         """Process articles using the specified model (zero-shot or gemini)."""
         articles_collection = db['Processed_Articles']
-        articles = list(articles_collection. find(({"is unique": True})))
+        articles = list(articles_collection.find(({"is unique": True})))
 
         for article in tqdm(articles, desc="Processing Articles"):
             headline = article.get("headline", "")

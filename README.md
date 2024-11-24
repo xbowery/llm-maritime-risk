@@ -32,12 +32,12 @@ To build out the entire proof of concept for our project, we enhanced the projec
 2. Please run [`store_categories.py`](./prompting/templates/store_categories.py) once first before proceeding with the pipeline.
 
 ### Explanation of Workflow
-1. Scraping - We have a module to automaticallly web scrape the websites and add the articles into the MongoDB. Thorough checks have been done to ensure duplicate articles from the same URL across multiple runs will not be added to the database.
-2. Summarisation - We have a module to automatically summarise the content of the news articles.
-3. Deduplication - We have a module to deduplicate the same news mentioned by different news outlets and focus only on the unique event for further processing with LLMs.
-4. Category Generation - We have a module to automatically generate the risk categories from the LLM based on the news articles.
-5. RAG - This module will automatically extract and discover new risk categories from the news articles which have been labelled as "Others" by the LLM initially.
-6. Severity Prediction - This module will automatically predict the severity of the maritime risk based on the article.
+1. [Scraping](./.github/workflows/scrape.yml) - We have a module to automaticallly web scrape the websites and add the articles into the MongoDB. Thorough checks have been done to ensure duplicate articles from the same URL across multiple runs will not be added to the database.
+2. [Summarisation](./.github/workflows/summarise.yml) - We have a module to automatically summarise the content of the news articles.
+3. [Deduplication](./.github/workflows/deduplicate.yml) - We have a module to deduplicate the same news mentioned by different news outlets and focus only on the unique event for further processing with LLMs.
+4. [Category Generation](./.github/workflows/category_generator.yml) - We have a module to automatically generate the risk categories from the LLM based on the news articles.
+5. [RAG](./.github/workflows/rag.yml) - This module will automatically extract and discover new risk categories from the news articles which have been labelled as "Others" by the LLM initially.
+6. [Severity Prediction](./.github/workflows/severity_prediction.yml) - This module will automatically predict the severity of the maritime risk based on the article.
 
 ## Results
 
