@@ -21,4 +21,5 @@ jobs:
       - name: Run the RAG risk generation
         env:
             OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+            GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
         run: python3 ./rag/rag.py
