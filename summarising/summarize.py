@@ -108,8 +108,8 @@ def map_articles_to_preprocessed_collection():
     scraped_articles_collection = db['Articles']
     processed_articles_collection = db['Processed_Articles']
 
-    scraped_articles = scraped_articles_collection.find(no_cursor_timeout=True)
-    processed_articles = processed_articles_collection.find(no_cursor_timeout=True)
+    scraped_articles = scraped_articles_collection.find()
+    processed_articles = processed_articles_collection.find()
 
     # for logs purpose
     expected_to_process = scraped_articles_collection.count_documents({}) - processed_articles_collection.count_documents({})
